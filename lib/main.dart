@@ -9,14 +9,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(),
-        body: const Column(
-          children: [
-            Center(
-              child: Text('hello'),
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text(
+              'Flutter Widget Test',
+              style: TextStyle(color: Colors.white),
             ),
-          ],
+            backgroundColor: Colors.amber,
+          ),
+          body: const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Center(
+                child: Text('hello'),
+              ),
+            ],
+          ),
         ),
       ),
     );
